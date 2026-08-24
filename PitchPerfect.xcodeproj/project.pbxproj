@@ -13,6 +13,7 @@
 		413FC2BD3039FA6400D820D3 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 413FC2BC3039FA6400D820D3 /* Base */; };
 		413FC2BF3039FA6800D820D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 413FC2BE3039FA6800D820D3 /* Assets.xcassets */; };
 		413FC2C23039FA6800D820D3 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 413FC2C13039FA6800D820D3 /* Base */; };
+		41E8072D303BDC7100323441 /* PlayBackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E8072C303BDC7100323441 /* PlayBackViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		413FC2BE3039FA6800D820D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		413FC2C13039FA6800D820D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		413FC2C33039FA6800D820D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		41E8072C303BDC7100323441 /* PlayBackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayBackViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				41ADBBAA303B0C6E00E553B5 /* App */,
-				413FC2B93039FA6400D820D3 /* ViewController.swift */,
+				41E8072E303BDC9400323441 /* Controller */,
 				413FC2BB3039FA6400D820D3 /* Main.storyboard */,
 				413FC2BE3039FA6800D820D3 /* Assets.xcassets */,
 				413FC2C03039FA6800D820D3 /* LaunchScreen.storyboard */,
@@ -73,6 +75,15 @@
 				413FC2B73039FA6400D820D3 /* SceneDelegate.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		41E8072E303BDC9400323441 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				413FC2B93039FA6400D820D3 /* ViewController.swift */,
+				41E8072C303BDC7100323441 /* PlayBackViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,6 +158,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				413FC2BA3039FA6400D820D3 /* ViewController.swift in Sources */,
+				41E8072D303BDC7100323441 /* PlayBackViewController.swift in Sources */,
 				413FC2B63039FA6400D820D3 /* AppDelegate.swift in Sources */,
 				413FC2B83039FA6400D820D3 /* SceneDelegate.swift in Sources */,
 			);
