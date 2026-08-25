@@ -9,6 +9,19 @@ Pitch Perfect is a two-scene app built with UIKit and Storyboards:
 1. **Record Sounds** — Tap the microphone to start recording. A "Recording..." label and enabled Stop button let you know it's in progress.
 2. **Play Sounds** — Once recording finishes, the app automatically transitions to a screen where you can play back your voice through six different audio effects.
 
+## 📸 Screenshots
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/645149ef-00ed-44c0-b1aa-a72aecfafad7" alt="Record Sounds screen" width="280">
+  <img src="https://github.com/user-attachments/assets/964c1519-819d-4e73-9571-493ca84659f0" alt="Play Sounds screen" width="280">
+</p>
+
+| Record Sounds | Play Sounds |
+|:---:|:---:|
+| Tap the mic to start recording, tap stop to finish | Choose an effect to play back your recording |
+
+> Add your own screenshots to a `screenshots/` folder in the repo root, named `record-screen.png` and `play-screen.png` (or update the paths above to match your files).
+
 ## ✨ Features
 
 - 🎤 Record audio using `AVAudioRecorder`
