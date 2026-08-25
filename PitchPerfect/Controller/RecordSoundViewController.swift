@@ -18,21 +18,14 @@ class RecordSoundViewController: UIViewController , AVAudioRecorderDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        
         stopRecordingButton.isEnabled = false
   }
-    
-    override func viewWillAppear(_ animated: Bool) {
-  }
-
 
     @IBAction func recordAudio(_ sender: UIButton) {
         recordingLabel.text = "Recording...."
         stopRecordingButton.isEnabled = true
         recordButton.isEnabled = false
         
-        // create path and where
         let dirPath = NSSearchPathForDirectoriesInDomains(
             .documentDirectory,
             .userDomainMask,
@@ -42,9 +35,7 @@ class RecordSoundViewController: UIViewController , AVAudioRecorderDelegate {
         let recordingName = "recordedVoice.wav"
         let pathArray = [dirPath, recordingName]
         let filePath = URL(string: pathArray.joined(separator: "/"))
-        print("File Path : \(filePath!)")
         
-        // create Session to specific whatyou want
         let session = AVAudioSession.sharedInstance()
         do {
             try session.setCategory(
@@ -56,7 +47,6 @@ class RecordSoundViewController: UIViewController , AVAudioRecorderDelegate {
             print("Can't set Category for Session" , error)
         }
         
-        // init recoder
         do {
             guard let filePath else {return}
             audioRecorder = try AVAudioRecorder(url: filePath, settings: [:])
@@ -97,7 +87,7 @@ class RecordSoundViewController: UIViewController , AVAudioRecorderDelegate {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "stopRecording" {
-            let playSoundsVC = segue.destination as! PlayBackViewController
+            let playSoundsVC = segue.destination as! PlaySoundsViewController
             let recordedAudioURL = sender as! URL
             playSoundsVC.recordedAudioURL = recordedAudioURL
         }
