@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Record Sound View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PitchPerfect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="RecordSoundViewController" customModule="PitchPerfect" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -42,7 +42,6 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="stopRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AYr-uA-ung"/>
-                                    <segue destination="AvQ-eR-fp6" kind="show" id="5hC-Ao-RV3"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -62,6 +61,7 @@
                         <outlet property="recordButton" destination="Qoq-Fl-Eq3" id="7fY-q7-RDU"/>
                         <outlet property="recordingLabel" destination="L0C-JT-qj3" id="GdX-j7-yqc"/>
                         <outlet property="stopRecordingButton" destination="xTS-rO-lVV" id="KRq-ne-r3a"/>
+                        <segue destination="AvQ-eR-fp6" kind="show" identifier="stopRecording" id="Rog-hR-9yR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -75,10 +75,25 @@
                     <view key="view" contentMode="scaleToFill" id="xEb-52-m6h">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vkv-xL-Qlk">
+                                <rect key="frame" x="175.66666666666666" y="415.66666666666669" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="21Y-0o-crW"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vkv-xL-Qlk" firstAttribute="centerY" secondItem="xEb-52-m6h" secondAttribute="centerY" id="RVh-pl-Gmq"/>
+                            <constraint firstItem="vkv-xL-Qlk" firstAttribute="centerX" secondItem="xEb-52-m6h" secondAttribute="centerX" id="vPk-XK-LEF"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="DeS-je-S3t"/>
+                    <connections>
+                        <outlet property="recorderAudioLabel" destination="vkv-xL-Qlk" id="zYg-nA-pNT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p2g-u7-ylL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

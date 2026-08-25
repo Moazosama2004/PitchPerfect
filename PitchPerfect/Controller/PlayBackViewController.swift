@@ -8,11 +8,16 @@
 import UIKit
 
 class PlayBackViewController: UIViewController {
+    
+    @IBOutlet weak var recorderAudioLabel: UILabel!
+    var recordedAudioURL: URL!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        if let recordedAudioURL {
+            recorderAudioLabel.text = "\(recordedAudioURL)"
+        }
     }
     
 
